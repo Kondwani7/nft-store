@@ -1,5 +1,9 @@
 import React from 'react'
-import { Box, Button, HStack } from '@chakra-ui/react';
+import {Icon, Box, Button, HStack, Link } from '@chakra-ui/react';
+import{FiHome} from 'react-icons/fi'
+import { MdOutlineEmail } from "react-icons/md";
+import { VscTwitter, VscGithub } from "react-icons/vsc";
+
 const Navbar = ({accounts, setAccounts}) => {
     const isConnected = Boolean(accounts[0]);
 
@@ -15,16 +19,24 @@ const Navbar = ({accounts, setAccounts}) => {
       <Box d="flex" alignItems="center" justifyContent="space-between" ml={6} mr={6} mb={5} mt={2}>
         {/*left hand navigation*/}
         <HStack>
-            <Box>Logo</Box>
-            <Box>twitter</Box>
-            <Box>email</Box>
+            <Link href='/' color="#183660" fontWeight="normal" fontSize="xl">
+                <Icon mr={3} as={FiHome} fontSize="2xl" color="#183660" fontWeight="normal"/>
+            </Link>
+            <Link href='https://twitter.com/Kondwani_G' color="#183660" fontWeight="normal" fontSize="xl">
+                <Icon mr={3} as={VscTwitter} color="#183660" fontWeight="normal" fontSize="2xl"></Icon>
+            </Link>
+            <Link href='https://github.com/kondwani7' color="#183660" fontWeight="normal" fontSize="xl">
+                <Icon as={VscGithub} mr={3} color="#183660" fontWeight="normal" fontSize="2xl"></Icon>
+            </Link>
+            <Link>
+                <Icon as={MdOutlineEmail} color="#183660" fontWeight="normal" fontSize="2xl"></Icon>
+            </Link>
         </HStack>
 
         {/*right hand side nav */}
         <HStack>
-            <Box>About us</Box>
+            <Link href='' color="#183660" fontWeight="normal" fontSize="xl" >About us</Link>
             <Box>Mint</Box>
-            <Box>github</Box>
         </HStack>
         
         {/*connect button*/}
