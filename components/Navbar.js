@@ -8,13 +8,14 @@ const Navbar = ({accounts, setAccounts}) => {
     const isConnected = Boolean(accounts[0]);
 
     async function connectAccount(){
-        if(window.etherum){
-            const accounts = await window.etherum.request({
+        if(window.ethereum){
+            const accounts = await window.ethereum.request({
                 method: "eth_requestAccounts",
             });
             setAccounts(accounts);
         }
     }
+
   return (
       <Box d="flex" alignItems="center" justifyContent="space-between" ml={6} mr={6} mb={5} mt={2}>
         {/*left hand navigation*/}
@@ -39,16 +40,12 @@ const Navbar = ({accounts, setAccounts}) => {
             <Box>Mint</Box>
         </HStack>
         
-        {/*connect button*/}
-        <HStack>
-            <Box>
+        {/*connect*/}
                 {isConnected ? (
                     <p>Connected</p>
                 ): (
                     <Button onClick={connectAccount}>Connect</Button>
                 )}
-            </Box>
-        </HStack>
         
       </Box>
   )
