@@ -5,12 +5,9 @@ This project demonstrates a basic Hardhat use case to mint nfts and buy tokens i
 Try running some of the following tasks:
 
 ```shell
-npx hardhat accounts
-npx hardhat compile
 npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/deployKondwaNFT.js
+npx hardhat compile
+node run scripts/deployKondwaNFT.js --network 'yourselected network'
 npx hardhat help
 ```
 
