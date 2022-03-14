@@ -17,4 +17,4 @@ npm run dev
 ```
 
 view deploy website
-[kondwaNFT]()
+[kondwaNFT](https://nft-store-swart.vercel.app/)
