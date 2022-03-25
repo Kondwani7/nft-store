@@ -18,7 +18,7 @@ const MainMint = ({accounts, setAccounts}) => {
                 signer
             );
             try{
-                const res = await contract.mint(BigNumber.from(mintAccount));
+                const res = await contract.mint(BigNumber.from(mintAmount));
                 console.log('response', res);
             }catch(err){
                 console.log('error:', err);

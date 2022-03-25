@@ -23,8 +23,7 @@ module.exports = {
   networks:{
     rinkeby:{
       url:process.env.RINKEBY_RPC_URL,
-      accounts: [process.env.RINKEBY_PRIVATE_KEY = '8caa69b4df36a83eca8f6a6cf9f2668a617df5cde621e4a0f97c1720c7d27d0e'
-]
+      accounts: [process.env.RINKEBY_PRIVATE_KEY]
     },
   },
   etherscan:{

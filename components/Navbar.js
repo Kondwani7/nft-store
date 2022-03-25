@@ -33,18 +33,12 @@ const Navbar = ({accounts, setAccounts}) => {
                 <Icon as={MdOutlineEmail} color="#183660" fontWeight="normal" fontSize="2xl"></Icon>
             </Link>
         </HStack>
-
-        {/*right hand side nav */}
-        <HStack>
-            <Link href='' color="#183660" fontWeight="normal" fontSize="xl" >About us</Link>
-            <Box>Mint</Box>
-        </HStack>
         
         {/*connect*/}
                 {isConnected ? (
                     <p>Connected</p>
                 ): (
-                    <Button onClick={connectAccount}>Connect</Button>
+                    <Button colorScheme='blue' onClick={connectAccount}>Connect</Button>
                 )}
         
       </Box>
